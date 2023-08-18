@@ -1,6 +1,10 @@
 name: 'ga4'
 version: '5.0.0'
 config-version: 2
+
+
+profile: 'my_profile'
+
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
@@ -18,3 +22,11 @@ models:
     +materialized: view
     marts:
       +materialized: table
+
+
+vars:
+  ga4:
+    project: "gm-trainiing"
+    dataset: "ga4_events"
+    start_date: "20201101" # Earliest date to load
+    static_incremental_days: 3 # Number of days to scan and reprocess on each run
