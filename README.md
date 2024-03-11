@@ -1,4 +1,4 @@
-# GA4 DBT Package - GM ccc dates
+# GA4 DBT Package - GM ccc dates 123
 
 This [dbt](https://www.getdbt.com/) package connects to an exported GA4 dataset and provides useful transformations as well as report-ready dimensional models that can be used to build reports.
 
