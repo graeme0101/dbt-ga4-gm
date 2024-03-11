@@ -49,10 +49,10 @@ with event_dimensions as
         device_language,
         device_is_limited_ad_tracking,
         device_time_zone_offset_seconds,
-        device_browser,
+--      device_browser,
         device_web_info_browser,
         device_web_info_browser_version,
-        device_web_info_hostname,
+--      device_web_info_hostname,
         user_campaign,
         user_medium,
         user_source,
@@ -130,10 +130,10 @@ with event_dimensions as
         ,FIRST_VALUE(device_language IGNORE NULLS) OVER (session_partition_window) AS device_language
         ,FIRST_VALUE(device_is_limited_ad_tracking IGNORE NULLS) OVER (session_partition_window) AS device_is_limited_ad_tracking
         ,FIRST_VALUE(device_time_zone_offset_seconds IGNORE NULLS) OVER (session_partition_window) AS device_time_zone_offset_seconds
-        ,FIRST_VALUE(device_browser IGNORE NULLS) OVER (session_partition_window) AS device_browser
-        ,FIRST_VALUE(device_web_info_browser IGNORE NULLS) OVER (session_partition_window) AS device_web_info_browser
+--      ,FIRST_VALUE(device_browser IGNORE NULLS) OVER (session_partition_window) AS device_browser
+--      ,FIRST_VALUE(device_web_info_browser IGNORE NULLS) OVER (session_partition_window) AS device_web_info_browser
         ,FIRST_VALUE(device_web_info_browser_version IGNORE NULLS) OVER (session_partition_window) AS device_web_info_browser_version
-        ,FIRST_VALUE(device_web_info_hostname IGNORE NULLS) OVER (session_partition_window) AS device_web_info_hostname
+--      ,FIRST_VALUE(device_web_info_hostname IGNORE NULLS) OVER (session_partition_window) AS device_web_info_hostname
         ,FIRST_VALUE(user_campaign IGNORE NULLS) OVER (session_partition_window) AS user_campaign
         ,FIRST_VALUE(user_medium IGNORE NULLS) OVER (session_partition_window) AS user_medium
         ,FIRST_VALUE(user_source IGNORE NULLS) OVER (session_partition_window) AS user_source
